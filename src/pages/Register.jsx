@@ -2,9 +2,12 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from "react-router-dom";
 
+<<<<<<< HEAD
 // Use environment variable for API URL - falls back to localhost for development
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
+=======
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
 function Register() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,7 +25,11 @@ function Register() {
     e.preventDefault();
     setLoading(true);
     try {
+<<<<<<< HEAD
       await axios.post(`${API_URL}/registration`, {
+=======
+      await axios.post('http://localhost:3000/registration', {
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         ...formData,
         eventName: selectedEvent?.name
       });
@@ -31,7 +38,11 @@ function Register() {
       if (error.response) {
         alert(`Registration Failed: ${error.response.data.message || 'Server error'}`);
       } else if (error.request) {
+<<<<<<< HEAD
         alert("Cannot reach server. Please try again later.");
+=======
+        alert("Cannot reach server. Is NestJS running on port 3000?");
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
       } else {
         alert("Registration Failed");
       }
@@ -89,6 +100,10 @@ function Register() {
           min-height: 100vh;
         }
 
+<<<<<<< HEAD
+=======
+        /* NAV */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .nav {
           position: fixed;
           top: 0; left: 0; right: 0;
@@ -122,6 +137,10 @@ function Register() {
         }
         .step-sep { color: var(--border); }
 
+<<<<<<< HEAD
+=======
+        /* PAGE */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .register-page {
           min-height: 100vh;
           padding: 7rem 4rem 4rem;
@@ -142,6 +161,10 @@ function Register() {
           pointer-events: none;
         }
 
+<<<<<<< HEAD
+=======
+        /* EVENT CARD (left) */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .event-sidebar {
           width: 300px;
           flex-shrink: 0;
@@ -205,6 +228,10 @@ function Register() {
         .info-row .info-label { color: var(--muted); font-size: 0.78rem; display: block; }
         .info-row .info-val { font-weight: 500; }
 
+<<<<<<< HEAD
+=======
+        /* FORM (right) */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .register-form-wrap {
           flex: 1;
           max-width: 480px;
@@ -242,6 +269,10 @@ function Register() {
           padding: 2rem;
         }
 
+<<<<<<< HEAD
+=======
+        /* INPUT GROUP */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .input-group { margin-bottom: 1.3rem; }
         .input-label {
           display: block;
@@ -283,6 +314,10 @@ function Register() {
         .input-field.focused { border-color: rgba(232,197,71,0.3); }
         .input-field::placeholder { color: #3a3a4a; }
 
+<<<<<<< HEAD
+=======
+        /* SUBMIT BUTTON */
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         .submit-btn {
           width: 100%;
           margin-top: 0.5rem;
@@ -342,6 +377,10 @@ function Register() {
         }
       `}</style>
 
+<<<<<<< HEAD
+=======
+      {/* NAV */}
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
       <nav className="nav">
         <div className="nav-logo" onClick={() => navigate("/")}>Eventify</div>
         <div className="nav-step">
@@ -354,6 +393,11 @@ function Register() {
       </nav>
 
       <div className="register-page">
+<<<<<<< HEAD
+=======
+
+        {/* EVENT SIDEBAR */}
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         <div className="event-sidebar">
           <div className="event-info-card">
             <div className="event-info-banner">
@@ -387,6 +431,10 @@ function Register() {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* FORM */}
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
         <div className="register-form-wrap">
           <div className="form-tag">✦ Step 1 of 3</div>
           <h1 className="form-title">Register for Event</h1>
@@ -433,4 +481,8 @@ function Register() {
   );
 }
 
+<<<<<<< HEAD
 export default Register;
+=======
+export default Register;
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075

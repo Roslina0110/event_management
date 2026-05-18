@@ -1,9 +1,13 @@
 import { Module } from '@nestjs/common';
+<<<<<<< HEAD
 import { ConfigModule } from '@nestjs/config';
+=======
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RegistrationModule } from './registration/registration.module';
 
 @Module({
+<<<<<<< HEAD
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
 
@@ -23,3 +27,35 @@ import { RegistrationModule } from './registration/registration.module';
   ],
 })
 export class AppModule {}
+=======
+
+  imports: [
+
+    TypeOrmModule.forRoot({
+
+      type: 'mysql',
+
+      host: 'localhost',
+
+      port: 3306,
+
+      username: 'root',
+
+      password: 'Roslinamanue@1979',
+
+      database: 'event_management',
+
+      autoLoadEntities: true,
+
+      synchronize: true,
+
+    }),
+
+    RegistrationModule,
+
+  ],
+
+})
+
+export class AppModule {}
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075

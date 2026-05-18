@@ -21,7 +21,10 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+<<<<<<< HEAD
     "@nestjs/config": "^4.0.4",
+=======
+>>>>>>> 46f457172239a81233c93f8bc57ef3946d8e8075
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/typeorm": "^11.0.1",
